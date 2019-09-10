@@ -16,5 +16,43 @@ namespace övning1_4
         {
             InitializeComponent();
         }
+
+        private void BtnKör_Click(object sender, EventArgs e)
+        {
+            FontStyle stil = FontStyle.Regular;
+
+            if (cbxFet.Checked)
+            {
+                stil = stil | FontStyle.Bold;
+            }
+            if (cbxKursiv.Checked)
+            {
+                stil = stil | FontStyle.Italic;
+            }
+            if (cbxUnderline.Checked)
+            {
+                stil = stil | FontStyle.Underline;
+            }
+
+            int size = int.Parse(tbxStorlek.Text);
+
+
+
+
+            if (size > 0)
+            {
+                Font font = new Font(tbxTecken.Text, size, stil);
+                tbxList.Font = font;
+            }
+            else
+            {
+                Font font = new Font(tbxTecken.Text, 10, stil);
+                tbxList.Font = font;
+            }
+
+
+
+
+        }
     }
 }
