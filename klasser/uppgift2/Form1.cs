@@ -23,16 +23,35 @@ namespace uppgift2
         {
             string name = tbxName.Text;
             int score = int.Parse(tbxPoints.Text);
-            Shoot s = new Shoot(name, score);
-            shootList.Add(s);
+            if (score >= 50)
+            {
+                MessageBox.Show("Score is too high!");
+            }
+            else
+            {
 
-            tbxList.Items.Add(s);
+                
+                Shoot s = new Shoot(name, score);
+                shootList.Add(s);
 
-            
+                tbxList.Items.Add(s);
 
 
-            MessageBox.Show("Score Registered");
-            antalReg++;
+
+
+                MessageBox.Show("Score Registered");
+                antalReg++;
+            }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            int filterScore = int.Parse(tbxPointsSort.Text);
+
+            if (filterScore)
+            {
+
+            }
         }
     }
 }

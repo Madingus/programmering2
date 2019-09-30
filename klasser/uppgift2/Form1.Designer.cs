@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbxPoints = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tbxPointsSort = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbxPoints = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,23 +86,17 @@
             this.groupBox1.Size = new System.Drawing.Size(236, 212);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sök Poäng Over:";
+            this.groupBox1.Text = "Sök Poäng Över:";
             // 
-            // label2
+            // button2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Poäng";
-            // 
-            // tbxPoints
-            // 
-            this.tbxPoints.Location = new System.Drawing.Point(126, 88);
-            this.tbxPoints.Name = "tbxPoints";
-            this.tbxPoints.Size = new System.Drawing.Size(100, 20);
-            this.tbxPoints.TabIndex = 5;
+            this.button2.Location = new System.Drawing.Point(161, 54);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label3
             // 
@@ -120,14 +114,21 @@
             this.tbxPointsSort.Size = new System.Drawing.Size(75, 20);
             this.tbxPointsSort.TabIndex = 7;
             // 
-            // button2
+            // label2
             // 
-            this.button2.Location = new System.Drawing.Point(161, 54);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(52, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Poäng";
+            // 
+            // tbxPoints
+            // 
+            this.tbxPoints.Location = new System.Drawing.Point(126, 88);
+            this.tbxPoints.Name = "tbxPoints";
+            this.tbxPoints.Size = new System.Drawing.Size(100, 20);
+            this.tbxPoints.TabIndex = 5;
             // 
             // Form1
             // 
