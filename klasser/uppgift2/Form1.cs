@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace uppgift2
@@ -47,11 +41,20 @@ namespace uppgift2
         private void Button2_Click(object sender, EventArgs e)
         {
             int filterScore = int.Parse(tbxPointsSort.Text);
+            tbxList.Items.Clear();
 
-            if (filterScore)
+            foreach (Shoot s in shootList)
             {
-
+                if(s.Poäng > filterScore)
+                {
+                   
+                    tbxList.Items.Add(s);
+                }
             }
+
+            
+                
+            
         }
     }
 }

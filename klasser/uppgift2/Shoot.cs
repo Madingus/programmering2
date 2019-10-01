@@ -27,5 +27,11 @@ namespace uppgift2
         {
             return namn + ": " + poäng + " poäng";
         }
+
+        public int Poäng
+        {
+            get { return poäng; }
+
+        }
     }
 }
