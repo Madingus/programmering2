@@ -57,16 +57,16 @@
             this.rbxCar.Name = "rbxCar";
             this.rbxCar.Size = new System.Drawing.Size(45, 17);
             this.rbxCar.TabIndex = 1;
-            this.rbxCar.TabStop = true;
             this.rbxCar.Text = "Bilar";
             this.rbxCar.UseVisualStyleBackColor = true;
+            this.rbxCar.CheckedChanged += new System.EventHandler(this.RbxAll_CheckedChanged);
             // 
             // lbxReg
             // 
             this.lbxReg.FormattingEnabled = true;
-            this.lbxReg.Location = new System.Drawing.Point(314, 125);
+            this.lbxReg.Location = new System.Drawing.Point(306, 96);
             this.lbxReg.Name = "lbxReg";
-            this.lbxReg.Size = new System.Drawing.Size(120, 95);
+            this.lbxReg.Size = new System.Drawing.Size(224, 186);
             this.lbxReg.TabIndex = 2;
             // 
             // label1
@@ -95,6 +95,9 @@
             // comboBoxDrop
             // 
             this.comboBoxDrop.FormattingEnabled = true;
+            this.comboBoxDrop.Items.AddRange(new object[] {
+            "Bil",
+            "MC"});
             this.comboBoxDrop.Location = new System.Drawing.Point(100, 261);
             this.comboBoxDrop.Name = "comboBoxDrop";
             this.comboBoxDrop.Size = new System.Drawing.Size(100, 21);
@@ -134,13 +137,14 @@
             this.rbxMC.Name = "rbxMC";
             this.rbxMC.Size = new System.Drawing.Size(41, 17);
             this.rbxMC.TabIndex = 10;
-            this.rbxMC.TabStop = true;
             this.rbxMC.Text = "MC";
             this.rbxMC.UseVisualStyleBackColor = true;
+            this.rbxMC.CheckedChanged += new System.EventHandler(this.RbxAll_CheckedChanged);
             // 
             // rbxAll
             // 
             this.rbxAll.AutoSize = true;
+            this.rbxAll.Checked = true;
             this.rbxAll.Location = new System.Drawing.Point(292, 346);
             this.rbxAll.Name = "rbxAll";
             this.rbxAll.Size = new System.Drawing.Size(42, 17);
@@ -148,6 +152,7 @@
             this.rbxAll.TabStop = true;
             this.rbxAll.Text = "Alla";
             this.rbxAll.UseVisualStyleBackColor = true;
+            this.rbxAll.CheckedChanged += new System.EventHandler(this.RbxAll_CheckedChanged);
             // 
             // btnRegister
             // 
