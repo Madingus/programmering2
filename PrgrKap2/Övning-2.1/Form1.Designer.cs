@@ -31,25 +31,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbxBokSidor = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbxBokTitel = new System.Windows.Forms.TextBox();
             this.btnBok = new System.Windows.Forms.Button();
             this.lbxLista = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tbxBokTitel = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.tbxLjudSpeltid = new System.Windows.Forms.TextBox();
             this.tbxLjudTitel = new System.Windows.Forms.TextBox();
             this.btnLjud = new System.Windows.Forms.Button();
-            this.tbxLjudSpeltid = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbxFilmUpplösning = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tbxFilmSpeltid = new System.Windows.Forms.TextBox();
-            this.tbxFilmTitel = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.tbxFilmTitel = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbxFilmUpplösning = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -85,6 +85,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bok";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Antal sidor";
+            // 
+            // tbxBokTitel
+            // 
+            this.tbxBokTitel.Location = new System.Drawing.Point(104, 76);
+            this.tbxBokTitel.Name = "tbxBokTitel";
+            this.tbxBokTitel.Size = new System.Drawing.Size(100, 20);
+            this.tbxBokTitel.TabIndex = 4;
+            // 
             // btnBok
             // 
             this.btnBok.Location = new System.Drawing.Point(85, 159);
@@ -93,6 +109,7 @@
             this.btnBok.TabIndex = 3;
             this.btnBok.Text = "Registrera bok";
             this.btnBok.UseVisualStyleBackColor = true;
+            this.btnBok.Click += new System.EventHandler(this.BtnBok_Click);
             // 
             // lbxLista
             // 
@@ -116,37 +133,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ljudspår";
             // 
-            // groupBox3
+            // label4
             // 
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.tbxFilmUpplösning);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.tbxFilmSpeltid);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.tbxFilmTitel);
-            this.groupBox3.Location = new System.Drawing.Point(686, 46);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(298, 198);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Film";
-            // 
-            // tbxBokTitel
-            // 
-            this.tbxBokTitel.Location = new System.Drawing.Point(104, 76);
-            this.tbxBokTitel.Name = "tbxBokTitel";
-            this.tbxBokTitel.Size = new System.Drawing.Size(100, 20);
-            this.tbxBokTitel.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Antal sidor";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(42, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Titel";
             // 
             // label3
             // 
@@ -156,6 +150,13 @@
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Speltid";
+            // 
+            // tbxLjudSpeltid
+            // 
+            this.tbxLjudSpeltid.Location = new System.Drawing.Point(109, 123);
+            this.tbxLjudSpeltid.Name = "tbxLjudSpeltid";
+            this.tbxLjudSpeltid.Size = new System.Drawing.Size(100, 20);
+            this.tbxLjudSpeltid.TabIndex = 7;
             // 
             // tbxLjudTitel
             // 
@@ -172,13 +173,48 @@
             this.btnLjud.TabIndex = 8;
             this.btnLjud.Text = "Registrera ljudspår";
             this.btnLjud.UseVisualStyleBackColor = true;
+            this.btnLjud.Click += new System.EventHandler(this.BtnLjud_Click);
             // 
-            // tbxLjudSpeltid
+            // groupBox3
             // 
-            this.tbxLjudSpeltid.Location = new System.Drawing.Point(109, 123);
-            this.tbxLjudSpeltid.Name = "tbxLjudSpeltid";
-            this.tbxLjudSpeltid.Size = new System.Drawing.Size(100, 20);
-            this.tbxLjudSpeltid.TabIndex = 7;
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.tbxFilmUpplösning);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.tbxFilmSpeltid);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.tbxFilmTitel);
+            this.groupBox3.Location = new System.Drawing.Point(686, 46);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(298, 198);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Film";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(52, 141);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Upplösning";
+            // 
+            // tbxFilmUpplösning
+            // 
+            this.tbxFilmUpplösning.Location = new System.Drawing.Point(127, 134);
+            this.tbxFilmUpplösning.Name = "tbxFilmUpplösning";
+            this.tbxFilmUpplösning.Size = new System.Drawing.Size(100, 20);
+            this.tbxFilmUpplösning.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(52, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Titel";
             // 
             // label5
             // 
@@ -196,13 +232,6 @@
             this.tbxFilmSpeltid.Size = new System.Drawing.Size(100, 20);
             this.tbxFilmSpeltid.TabIndex = 12;
             // 
-            // tbxFilmTitel
-            // 
-            this.tbxFilmTitel.Location = new System.Drawing.Point(127, 62);
-            this.tbxFilmTitel.Name = "tbxFilmTitel";
-            this.tbxFilmTitel.Size = new System.Drawing.Size(100, 20);
-            this.tbxFilmTitel.TabIndex = 14;
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(88, 169);
@@ -211,6 +240,14 @@
             this.button3.TabIndex = 13;
             this.button3.Text = "Registrera film";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
+            // tbxFilmTitel
+            // 
+            this.tbxFilmTitel.Location = new System.Drawing.Point(127, 62);
+            this.tbxFilmTitel.Name = "tbxFilmTitel";
+            this.tbxFilmTitel.Size = new System.Drawing.Size(100, 20);
+            this.tbxFilmTitel.TabIndex = 14;
             // 
             // label7
             // 
@@ -221,40 +258,6 @@
             this.label7.Size = new System.Drawing.Size(271, 55);
             this.label7.TabIndex = 16;
             this.label7.Text = "BIBLIOTEK";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Titel";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(52, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Titel";
-            // 
-            // tbxFilmUpplösning
-            // 
-            this.tbxFilmUpplösning.Location = new System.Drawing.Point(127, 134);
-            this.tbxFilmUpplösning.Name = "tbxFilmUpplösning";
-            this.tbxFilmUpplösning.Size = new System.Drawing.Size(100, 20);
-            this.tbxFilmUpplösning.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(52, 141);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Upplösning";
             // 
             // Form1
             // 

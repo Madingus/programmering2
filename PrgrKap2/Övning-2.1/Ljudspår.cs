@@ -6,29 +6,21 @@ using System.Threading.Tasks;
 
 namespace Övning_2._1
 {
-    class Bok  : Media
+    class Ljudspår : Media
     {
-
+        protected int speltid;
         
-        protected int antalSidor;
-
-        public Bok(string titel, int antalSidor) : base(titel)
+        public Ljudspår(string titel, int _speltid) : base(titel)
         {
-            this.antalSidor = antalSidor;
+
+            this.speltid = _speltid;
 
         }
 
         public override string ToString()
         {
-            return this.titel + ": " + this.antalSidor + " Sidor"; 
+            return this.titel + ": " + this.speltid + " Minuter";
         }
-
-
-
-
-
-
-
 
 
     }
