@@ -8,5 +8,32 @@ namespace övning_2._2
 {
     class Anställd
     {
+       
+        protected string namn;
+        
+
+
+        public Anställd( string _namn)
+        {
+            
+            this.namn = _namn;
+           
+
+
+        }
+       
+
+        public string Namn
+        {
+            get { return namn; }
+        }
+
+        public double BeräknaLön()
+        {
+            return 0;
+        }
+
+
+
     }
 }
