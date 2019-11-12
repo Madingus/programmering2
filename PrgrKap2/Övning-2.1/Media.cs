@@ -17,19 +17,12 @@ namespace Övning_2._1
 
             this.titel = _titel;
             
-
-
         }
 
         public string Titel
         {
             get { return titel; }
         }
-
-        
-
-
-
 
 
     }

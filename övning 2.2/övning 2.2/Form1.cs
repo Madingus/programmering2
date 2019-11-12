@@ -12,6 +12,9 @@ namespace övning_2._2
 {
     public partial class Form1 : Form
     {
+
+        private List<Säljare> säljarLista = new List<Säljare>();
+
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +27,15 @@ namespace övning_2._2
 
         private void BtnSäljare_Click(object sender, EventArgs e)
         {
+            
+
+
+           
+            Säljare s = new Säljare(double.Parse(tbxFörsäljareProvision.Text), double.Parse(tbxFörsäljareFörsäljning.Text), tbxFörsäljareNamn.Text);
+
+            säljarLista.Add(s);
+
+            lbxReg.Items.Add(s);
 
         }
 

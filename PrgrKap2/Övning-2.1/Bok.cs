@@ -26,10 +26,5 @@ namespace Övning_2._1
 
 
 
-
-
-
-
-
     }
 }
