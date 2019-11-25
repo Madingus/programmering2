@@ -21,6 +21,55 @@ namespace övning2._5
             lista = new T[längd];
         }
 
+
+        public int Antal
+        {
+            get { return antal; }
+        }
+
+        public T ElementFrån (int index)
+        {
+            return lista[index];
+        }
+
+        public bool Har(T värde)
+        {
+            
+
+            foreach(T i in lista)
+            {
+                if (i.Equals(värde))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public int Sök(T värde)
+        {
+            for (int i = 0; i < antal; i++)
+            {
+                if (värde.Equals(lista[i]))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        public void LäggTill(Samling<T> samling)
+        {
+            if (antal + samling.lista.Length > längd)
+            {
+                Expandera(samling.lista.Length + buffert);
+            }
+            for (int i = 0; i < samling.lista.Length; i++)
+            {
+                lista[antal++] = samling.lista[i];
+            }
+        }
+
         protected void Expandera ( int storlek )
         {
             if (storlek < 1) return; // ???????
