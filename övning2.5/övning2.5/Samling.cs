@@ -97,7 +97,7 @@ namespace övning2._5
 
         }
 
-        public void LäggTill(T e)
+        public virtual void LäggTill(T e)
         {
             //skaffa fler platser om det behövs
             if (antal + 1 > längd) Expandera(1 + buffert);

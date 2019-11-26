@@ -19,6 +19,17 @@ namespace övning2._5
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Samling<int> s = new Samling<int>();
+
+            s.LäggTill(10);
+
+            Mängd<int> m = new Mängd<int>();
+
+            m.LäggTill(100);
+            m.LäggTill(100);
+            m.LäggTill(150);
+            m.LäggTill(150);
+
 
         }
     }
