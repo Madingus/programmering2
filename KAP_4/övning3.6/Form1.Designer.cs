@@ -28,20 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rbxResult = new System.Windows.Forms.RichTextBox();
+            this.ribxResult = new System.Windows.Forms.RichTextBox();
             this.btnFont = new System.Windows.Forms.Button();
             this.rbnLeft = new System.Windows.Forms.RadioButton();
             this.rbnMiddle = new System.Windows.Forms.RadioButton();
             this.rbnRight = new System.Windows.Forms.RadioButton();
+            this.rbnColor = new System.Windows.Forms.RadioButton();
+            this.fontDialog = new System.Windows.Forms.FontDialog();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
-            // rbxResult
+            // ribxResult
             // 
-            this.rbxResult.Location = new System.Drawing.Point(12, 104);
-            this.rbxResult.Name = "rbxResult";
-            this.rbxResult.Size = new System.Drawing.Size(776, 334);
-            this.rbxResult.TabIndex = 0;
-            this.rbxResult.Text = "";
+            this.ribxResult.Location = new System.Drawing.Point(12, 104);
+            this.ribxResult.Name = "ribxResult";
+            this.ribxResult.Size = new System.Drawing.Size(776, 334);
+            this.ribxResult.TabIndex = 0;
+            this.ribxResult.Text = "";
+            this.ribxResult.TextChanged += new System.EventHandler(this.RibxResult_TextChanged);
             // 
             // btnFont
             // 
@@ -63,6 +67,7 @@
             this.rbnLeft.TabStop = true;
             this.rbnLeft.Text = "<---";
             this.rbnLeft.UseVisualStyleBackColor = true;
+            this.rbnLeft.CheckedChanged += new System.EventHandler(this.RbnLeft_CheckedChanged);
             // 
             // rbnMiddle
             // 
@@ -74,7 +79,9 @@
             this.rbnMiddle.TabIndex = 3;
             this.rbnMiddle.TabStop = true;
             this.rbnMiddle.Text = "<-->";
+            this.rbnMiddle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.rbnMiddle.UseVisualStyleBackColor = true;
+            this.rbnMiddle.CheckedChanged += new System.EventHandler(this.RbnMiddle_CheckedChanged);
             // 
             // rbnRight
             // 
@@ -87,17 +94,34 @@
             this.rbnRight.TabStop = true;
             this.rbnRight.Text = "-->";
             this.rbnRight.UseVisualStyleBackColor = true;
+            this.rbnRight.CheckedChanged += new System.EventHandler(this.RbnRight_CheckedChanged);
+            // 
+            // rbnColor
+            // 
+            this.rbnColor.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbnColor.AutoSize = true;
+            this.rbnColor.BackColor = System.Drawing.Color.Lime;
+            this.rbnColor.ForeColor = System.Drawing.Color.Crimson;
+            this.rbnColor.Location = new System.Drawing.Point(382, 43);
+            this.rbnColor.Name = "rbnColor";
+            this.rbnColor.Size = new System.Drawing.Size(23, 23);
+            this.rbnColor.TabIndex = 5;
+            this.rbnColor.TabStop = true;
+            this.rbnColor.Text = "  ";
+            this.rbnColor.UseVisualStyleBackColor = false;
+            this.rbnColor.CheckedChanged += new System.EventHandler(this.RbnColor_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rbnColor);
             this.Controls.Add(this.rbnRight);
             this.Controls.Add(this.rbnMiddle);
             this.Controls.Add(this.rbnLeft);
             this.Controls.Add(this.btnFont);
-            this.Controls.Add(this.rbxResult);
+            this.Controls.Add(this.ribxResult);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -107,11 +131,14 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox rbxResult;
+        private System.Windows.Forms.RichTextBox ribxResult;
         private System.Windows.Forms.Button btnFont;
         private System.Windows.Forms.RadioButton rbnLeft;
         private System.Windows.Forms.RadioButton rbnMiddle;
         private System.Windows.Forms.RadioButton rbnRight;
+        private System.Windows.Forms.RadioButton rbnColor;
+        private System.Windows.Forms.FontDialog fontDialog;
+        private System.Windows.Forms.ColorDialog colorDialog;
     }
 }
 
