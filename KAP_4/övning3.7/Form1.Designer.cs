@@ -28,81 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.btnMålrikast = new System.Windows.Forms.Button();
+            this.tbxMålrikast = new System.Windows.Forms.TextBox();
+            this.dvgMatcher = new System.Windows.Forms.DataGridView();
             this.Hemmalag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bortalag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.målH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MålA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MålB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgMatcher)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Hemmalag,
-            this.Bortalag,
-            this.målH,
-            this.MålB});
-            this.dataGridView1.Location = new System.Drawing.Point(119, 101);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(526, 278);
-            this.dataGridView1.TabIndex = 0;
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // btnMålrikast
+            // 
+            this.btnMålrikast.Location = new System.Drawing.Point(131, 398);
+            this.btnMålrikast.Name = "btnMålrikast";
+            this.btnMålrikast.Size = new System.Drawing.Size(75, 23);
+            this.btnMålrikast.TabIndex = 1;
+            this.btnMålrikast.Text = "button1";
+            this.btnMålrikast.UseVisualStyleBackColor = true;
+            // 
+            // tbxMålrikast
+            // 
+            this.tbxMålrikast.Location = new System.Drawing.Point(277, 401);
+            this.tbxMålrikast.Name = "tbxMålrikast";
+            this.tbxMålrikast.Size = new System.Drawing.Size(100, 20);
+            this.tbxMålrikast.TabIndex = 2;
+            // 
+            // dvgMatcher
+            // 
+            this.dvgMatcher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgMatcher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Hemmalag,
+            this.Bortalag,
+            this.MålA,
+            this.MålB});
+            this.dvgMatcher.Location = new System.Drawing.Point(131, 131);
+            this.dvgMatcher.Name = "dvgMatcher";
+            this.dvgMatcher.Size = new System.Drawing.Size(446, 186);
+            this.dvgMatcher.TabIndex = 3;
+            // 
             // Hemmalag
             // 
             this.Hemmalag.HeaderText = "Hemmalag";
             this.Hemmalag.Name = "Hemmalag";
-            this.Hemmalag.ReadOnly = true;
             // 
             // Bortalag
             // 
             this.Bortalag.HeaderText = "Bortalag";
             this.Bortalag.Name = "Bortalag";
-            this.Bortalag.ReadOnly = true;
             // 
-            // målH
+            // MålA
             // 
-            this.målH.HeaderText = "Mål (H)";
-            this.målH.Name = "målH";
-            this.målH.ReadOnly = true;
+            this.MålA.HeaderText = "Mål(A)";
+            this.MålA.Name = "MålA";
             // 
             // MålB
             // 
-            this.MålB.HeaderText = "Mål (B)";
+            this.MålB.HeaderText = "Mål(B)";
             this.MålB.Name = "MålB";
-            this.MålB.ReadOnly = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dvgMatcher);
+            this.Controls.Add(this.tbxMålrikast);
+            this.Controls.Add(this.btnMålrikast);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgMatcher)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.TextBox tbxMålrikast;
+        private System.Windows.Forms.Button btnMålrikast;
+        private System.Windows.Forms.DataGridView dvgMatcher;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hemmalag;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bortalag;
-        private System.Windows.Forms.DataGridViewTextBoxColumn målH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MålA;
         private System.Windows.Forms.DataGridViewTextBoxColumn MålB;
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
 
