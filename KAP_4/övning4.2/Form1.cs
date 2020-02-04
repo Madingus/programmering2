@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-namespace Kap_4
+
+
+namespace övning4._2
 {
     public partial class Form1 : Form
     {
@@ -17,17 +19,7 @@ namespace Kap_4
             InitializeComponent();
         }
 
-        private void SparaSomToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NyttToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tbxResultat.Text = "";
-        }
-
-        private void ÖppnaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BtnOpen_Click(object sender, EventArgs e)
         {
             DialogResult result = dlgOpenFile.ShowDialog();
             if (result == DialogResult.OK)
@@ -38,14 +30,14 @@ namespace Kap_4
 
                 string fileText = reader.ReadToEnd();
 
-                tbxResultat.Text = fileText;
+                // tbxFörnamn.Text = fileText; ??
 
                 reader.Dispose();
 
             }
         }
 
-        private void SparaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
             DialogResult result = dlgSaveFile.ShowDialog();
@@ -55,12 +47,15 @@ namespace Kap_4
 
                 StreamWriter writer = new StreamWriter(outstream);
 
-                writer.Write(tbxResultat.Text);
+                writer.Write("Förnamn: " + tbxFörnamn.Text + "\r\n");
+                writer.Write("Efternamn: " + tbxEfternamn.Text + "\r\n");
+                writer.Write("Epost: : " + tbxEpost.Text + "\r\n");
+                writer.Write("telefonnummer: " + tbxTelefon.Text + "\r\n");
 
                 writer.Dispose();
-
+                
+                
             }
-
         }
     }
 }

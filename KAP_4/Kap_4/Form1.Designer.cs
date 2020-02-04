@@ -31,7 +31,6 @@
             this.tbxFöre = new System.Windows.Forms.TextBox();
             this.tbxEfter = new System.Windows.Forms.TextBox();
             this.btnErsätt = new System.Windows.Forms.Button();
-            this.lbxResultat = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arkivToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +38,10 @@
             this.sparaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sparaSomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stängToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
+            this.dlgOpenFile = new System.Windows.Forms.OpenFileDialog();
+            this.öppnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbxResultat = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,14 +68,6 @@
             this.btnErsätt.Text = "Ersätt";
             this.btnErsätt.UseVisualStyleBackColor = true;
             // 
-            // lbxResultat
-            // 
-            this.lbxResultat.FormattingEnabled = true;
-            this.lbxResultat.Location = new System.Drawing.Point(107, 122);
-            this.lbxResultat.Name = "lbxResultat";
-            this.lbxResultat.Size = new System.Drawing.Size(636, 316);
-            this.lbxResultat.TabIndex = 3;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -96,6 +91,7 @@
             // 
             this.arkivToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nyttToolStripMenuItem,
+            this.öppnaToolStripMenuItem,
             this.sparaToolStripMenuItem,
             this.sparaSomToolStripMenuItem,
             this.stängToolStripMenuItem});
@@ -108,12 +104,14 @@
             this.nyttToolStripMenuItem.Name = "nyttToolStripMenuItem";
             this.nyttToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nyttToolStripMenuItem.Text = "Nytt";
+            this.nyttToolStripMenuItem.Click += new System.EventHandler(this.NyttToolStripMenuItem_Click);
             // 
             // sparaToolStripMenuItem
             // 
             this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
             this.sparaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sparaToolStripMenuItem.Text = "Spara";
+            this.sparaToolStripMenuItem.Click += new System.EventHandler(this.SparaToolStripMenuItem_Click);
             // 
             // sparaSomToolStripMenuItem
             // 
@@ -128,13 +126,32 @@
             this.stängToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stängToolStripMenuItem.Text = "Stäng";
             // 
+            // dlgOpenFile
+            // 
+            this.dlgOpenFile.FileName = "openFileDialog1";
+            // 
+            // öppnaToolStripMenuItem
+            // 
+            this.öppnaToolStripMenuItem.Name = "öppnaToolStripMenuItem";
+            this.öppnaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.öppnaToolStripMenuItem.Text = "Öppna";
+            this.öppnaToolStripMenuItem.Click += new System.EventHandler(this.ÖppnaToolStripMenuItem_Click);
+            // 
+            // tbxResultat
+            // 
+            this.tbxResultat.Location = new System.Drawing.Point(120, 144);
+            this.tbxResultat.Multiline = true;
+            this.tbxResultat.Name = "tbxResultat";
+            this.tbxResultat.Size = new System.Drawing.Size(486, 242);
+            this.tbxResultat.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbxResultat);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbxResultat);
             this.Controls.Add(this.btnErsätt);
             this.Controls.Add(this.tbxEfter);
             this.Controls.Add(this.tbxFöre);
@@ -153,7 +170,6 @@
         private System.Windows.Forms.TextBox tbxFöre;
         private System.Windows.Forms.TextBox tbxEfter;
         private System.Windows.Forms.Button btnErsätt;
-        private System.Windows.Forms.ListBox lbxResultat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arkivToolStripMenuItem;
@@ -161,6 +177,10 @@
         private System.Windows.Forms.ToolStripMenuItem sparaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sparaSomToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stängToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog dlgSaveFile;
+        private System.Windows.Forms.OpenFileDialog dlgOpenFile;
+        private System.Windows.Forms.ToolStripMenuItem öppnaToolStripMenuItem;
+        private System.Windows.Forms.TextBox tbxResultat;
     }
 }
 
