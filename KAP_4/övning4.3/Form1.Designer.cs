@@ -30,6 +30,8 @@
         {
             this.dlgMeny = new System.Windows.Forms.MenuStrip();
             this.arkivToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sparaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.öppnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redigeraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.läggTillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taBortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbxResult = new System.Windows.Forms.ListBox();
-            this.dlgSave = new System.Windows.Forms.SaveFileDialog();
+            this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
             this.dlgOpenFile = new System.Windows.Forms.FolderBrowserDialog();
             this.dlgMeny.SuspendLayout();
             this.SuspendLayout();
@@ -60,9 +62,25 @@
             // 
             // arkivToolStripMenuItem
             // 
+            this.arkivToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sparaToolStripMenuItem,
+            this.öppnaToolStripMenuItem});
             this.arkivToolStripMenuItem.Name = "arkivToolStripMenuItem";
             this.arkivToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.arkivToolStripMenuItem.Text = "Arkiv";
+            // 
+            // sparaToolStripMenuItem
+            // 
+            this.sparaToolStripMenuItem.Name = "sparaToolStripMenuItem";
+            this.sparaToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.sparaToolStripMenuItem.Text = "Spara";
+            this.sparaToolStripMenuItem.Click += new System.EventHandler(this.SparaToolStripMenuItem_Click);
+            // 
+            // öppnaToolStripMenuItem
+            // 
+            this.öppnaToolStripMenuItem.Name = "öppnaToolStripMenuItem";
+            this.öppnaToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.öppnaToolStripMenuItem.Text = "Öppna";
             // 
             // redigeraToolStripMenuItem
             // 
@@ -77,7 +95,7 @@
             // 
             this.läggTillToolStripMenuItem.Name = "läggTillToolStripMenuItem";
             this.läggTillToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.läggTillToolStripMenuItem.Text = "Lägg till";
+            this.läggTillToolStripMenuItem.Text = "Spara";
             this.läggTillToolStripMenuItem.Click += new System.EventHandler(this.LäggTillToolStripMenuItem_Click);
             // 
             // taBortToolStripMenuItem
@@ -159,9 +177,9 @@
             this.lbxResult.Size = new System.Drawing.Size(244, 160);
             this.lbxResult.TabIndex = 9;
             // 
-            // dlgSave
+            // dlgSaveFile
             // 
-            this.dlgSave.FileOk += new System.ComponentModel.CancelEventHandler(this.SaveFileDialog1_FileOk);
+            this.dlgSaveFile.FileOk += new System.ComponentModel.CancelEventHandler(this.SaveFileDialog1_FileOk);
             // 
             // Form1
             // 
@@ -203,8 +221,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox lbxResult;
-        private System.Windows.Forms.SaveFileDialog dlgSave;
+        private System.Windows.Forms.SaveFileDialog dlgSaveFile;
         private System.Windows.Forms.FolderBrowserDialog dlgOpenFile;
+        private System.Windows.Forms.ToolStripMenuItem sparaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem öppnaToolStripMenuItem;
     }
 }
 
