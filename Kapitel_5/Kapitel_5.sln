@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "övning5.1 UDP Server", "övning5.1\övning5.1 UDP Server.csproj", "{5B712040-08D9-4BA7-925C-43FEE144C9E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "övning5.1 UDP Klient", "övning5.1 UDP Klient\övning5.1 UDP Klient.csproj", "{377B3BC0-82CF-4E70-8125-8A9A00339D8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B712040-08D9-4BA7-925C-43FEE144C9E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B712040-08D9-4BA7-925C-43FEE144C9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B712040-08D9-4BA7-925C-43FEE144C9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B712040-08D9-4BA7-925C-43FEE144C9E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{377B3BC0-82CF-4E70-8125-8A9A00339D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{377B3BC0-82CF-4E70-8125-8A9A00339D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{377B3BC0-82CF-4E70-8125-8A9A00339D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{377B3BC0-82CF-4E70-8125-8A9A00339D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F581F5B-68BB-4B5D-8D64-B180202B1EB0}
+	EndGlobalSection
+EndGlobal
