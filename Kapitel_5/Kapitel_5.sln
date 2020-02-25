@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "övning5.1 UDP Server", "övning5.1\övning5.1 UDP Server.csproj", "{5B712040-08D9-4BA7-925C-43FEE144C9E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "övning5.1 UDP Klient", "övning5.1 UDP Klient\övning5.1 UDP Klient.csproj", "{377B3BC0-82CF-4E70-8125-8A9A00339D8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "övning5__1 UDP Klient", "övning5__1 UDP Klient\övning5__1 UDP Klient.csproj", "{14E0D21A-012B-4F7A-8059-BE9E43906DFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "övning 5.2 Klient", "övning 5.2 Klient\övning 5.2 Klient.csproj", "{6015AC47-6B65-42BE-8C1F-76125FF795E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "övning5.2 Server", "övning5.2 Server\övning5.2 Server.csproj", "{52A05F67-4E93-4095-984E-07A55F87A0E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2", "5.2", "{55A2B5A6-4442-480B-A460-19CC42E567E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,13 +23,25 @@ Global
 		{5B712040-08D9-4BA7-925C-43FEE144C9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B712040-08D9-4BA7-925C-43FEE144C9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B712040-08D9-4BA7-925C-43FEE144C9E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{377B3BC0-82CF-4E70-8125-8A9A00339D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{377B3BC0-82CF-4E70-8125-8A9A00339D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{377B3BC0-82CF-4E70-8125-8A9A00339D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{377B3BC0-82CF-4E70-8125-8A9A00339D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E0D21A-012B-4F7A-8059-BE9E43906DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E0D21A-012B-4F7A-8059-BE9E43906DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E0D21A-012B-4F7A-8059-BE9E43906DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E0D21A-012B-4F7A-8059-BE9E43906DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6015AC47-6B65-42BE-8C1F-76125FF795E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6015AC47-6B65-42BE-8C1F-76125FF795E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6015AC47-6B65-42BE-8C1F-76125FF795E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6015AC47-6B65-42BE-8C1F-76125FF795E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A05F67-4E93-4095-984E-07A55F87A0E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A05F67-4E93-4095-984E-07A55F87A0E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A05F67-4E93-4095-984E-07A55F87A0E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A05F67-4E93-4095-984E-07A55F87A0E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6015AC47-6B65-42BE-8C1F-76125FF795E6} = {55A2B5A6-4442-480B-A460-19CC42E567E2}
+		{52A05F67-4E93-4095-984E-07A55F87A0E7} = {55A2B5A6-4442-480B-A460-19CC42E567E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F581F5B-68BB-4B5D-8D64-B180202B1EB0}

@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbxServerPortnummer = new System.Windows.Forms.TextBox();
             this.btnRecieve = new System.Windows.Forms.Button();
-            this.lbxInkorg = new System.Windows.Forms.ListBox();
+            this.tbxInbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -68,25 +68,26 @@
             this.btnRecieve.TabIndex = 8;
             this.btnRecieve.Text = "Recieve";
             this.btnRecieve.UseVisualStyleBackColor = true;
+            this.btnRecieve.Click += new System.EventHandler(this.BtnRecieve_Click);
             // 
-            // lbxInkorg
+            // tbxInbox
             // 
-            this.lbxInkorg.FormattingEnabled = true;
-            this.lbxInkorg.Location = new System.Drawing.Point(12, 109);
-            this.lbxInkorg.Name = "lbxInkorg";
-            this.lbxInkorg.Size = new System.Drawing.Size(231, 95);
-            this.lbxInkorg.TabIndex = 7;
+            this.tbxInbox.Location = new System.Drawing.Point(46, 93);
+            this.tbxInbox.Multiline = true;
+            this.tbxInbox.Name = "tbxInbox";
+            this.tbxInbox.Size = new System.Drawing.Size(197, 85);
+            this.tbxInbox.TabIndex = 12;
             // 
             // Form1Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbxInbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxServerPortnummer);
             this.Controls.Add(this.btnRecieve);
-            this.Controls.Add(this.lbxInkorg);
             this.Name = "Form1Server";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -101,7 +102,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbxServerPortnummer;
         private System.Windows.Forms.Button btnRecieve;
-        private System.Windows.Forms.ListBox lbxInkorg;
+        private System.Windows.Forms.TextBox tbxInbox;
     }
 }
 
