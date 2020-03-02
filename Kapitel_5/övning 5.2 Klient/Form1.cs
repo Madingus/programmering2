@@ -16,5 +16,10 @@ namespace övning_5._2_Klient
         {
             InitializeComponent();
         }
+
+        private void BtnSayHi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

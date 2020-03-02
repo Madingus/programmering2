@@ -14,6 +14,10 @@ namespace övning5._1 //server
 {
     public partial class Form1Server : Form
     {
+        TcpListener lyssnare;
+        TcpClient klient;
+        int port = 12345;
+
         public Form1Server()
         {
             InitializeComponent();
@@ -36,6 +40,11 @@ namespace övning5._1 //server
             byte[] inStream = client.Receive(ref klientEndPoint);
             tbxInbox.Text = Encoding.Unicode.GetString(inStream);
 
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

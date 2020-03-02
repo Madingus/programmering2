@@ -33,6 +33,7 @@
             this.tbxServerPortnummer = new System.Windows.Forms.TextBox();
             this.btnRecieve = new System.Windows.Forms.Button();
             this.tbxInbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -78,11 +79,23 @@
             this.tbxInbox.Size = new System.Drawing.Size(197, 85);
             this.tbxInbox.TabIndex = 12;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(317, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 37);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Server";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            // 
             // Form1Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxInbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -103,6 +116,7 @@
         private System.Windows.Forms.TextBox tbxServerPortnummer;
         private System.Windows.Forms.Button btnRecieve;
         private System.Windows.Forms.TextBox tbxInbox;
+        private System.Windows.Forms.Label label1;
     }
 }
 
