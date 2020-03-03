@@ -35,14 +35,21 @@ namespace övning5._2_Server
             //väntar på "Connect" i klienten
             klient = lyssnare.AcceptTcpClient();
 
-            byte[] inData = new byte[256];
+            
 
+           
+        }
+
+        private void BtnRecieveMessage_Click(object sender, EventArgs e)
+        {
+
+            byte[] inData = new byte[256];
             //väntar på "Send" från klienten
             int antalByte = klient.GetStream().Read(inData, 0, inData.Length); //?
 
             tbxInbox.Text = Encoding.Unicode.GetString(inData, 0, antalByte);
-            klient.Close();
-            lyssnare.Stop();
+            
+            
         }
     }
 }

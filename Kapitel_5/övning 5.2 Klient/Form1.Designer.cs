@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSayHi = new System.Windows.Forms.Button();
+            this.tbxKlientMessage = new System.Windows.Forms.TextBox();
+            this.btnSendMessage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxServerAdress
@@ -62,19 +64,39 @@
             // 
             // btnSayHi
             // 
-            this.btnSayHi.Location = new System.Drawing.Point(174, 155);
+            this.btnSayHi.Location = new System.Drawing.Point(260, 117);
             this.btnSayHi.Name = "btnSayHi";
             this.btnSayHi.Size = new System.Drawing.Size(75, 23);
             this.btnSayHi.TabIndex = 15;
-            this.btnSayHi.Text = "Say Hi!";
+            this.btnSayHi.Text = "Anslut";
             this.btnSayHi.UseVisualStyleBackColor = true;
             this.btnSayHi.Click += new System.EventHandler(this.BtnSayHi_Click);
+            // 
+            // tbxKlientMessage
+            // 
+            this.tbxKlientMessage.Location = new System.Drawing.Point(59, 144);
+            this.tbxKlientMessage.Multiline = true;
+            this.tbxKlientMessage.Name = "tbxKlientMessage";
+            this.tbxKlientMessage.Size = new System.Drawing.Size(182, 83);
+            this.tbxKlientMessage.TabIndex = 16;
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.Location = new System.Drawing.Point(91, 233);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(119, 23);
+            this.btnSendMessage.TabIndex = 17;
+            this.btnSendMessage.Text = "Skicka meddelande";
+            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.BtnSendMessage_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSendMessage);
+            this.Controls.Add(this.tbxKlientMessage);
             this.Controls.Add(this.btnSayHi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -92,6 +114,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSayHi;
+        private System.Windows.Forms.TextBox tbxKlientMessage;
+        private System.Windows.Forms.Button btnSendMessage;
     }
 }
 

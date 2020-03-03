@@ -32,6 +32,7 @@
             this.tbxInbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnStartaServer = new System.Windows.Forms.Button();
+            this.btnRecieveMessage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -71,11 +72,22 @@
             this.btnStartaServer.UseVisualStyleBackColor = true;
             this.btnStartaServer.Click += new System.EventHandler(this.BtnStartaServer_Click);
             // 
+            // btnRecieveMessage
+            // 
+            this.btnRecieveMessage.Location = new System.Drawing.Point(80, 251);
+            this.btnRecieveMessage.Name = "btnRecieveMessage";
+            this.btnRecieveMessage.Size = new System.Drawing.Size(75, 23);
+            this.btnRecieveMessage.TabIndex = 18;
+            this.btnRecieveMessage.Text = "Ta emot meddelande";
+            this.btnRecieveMessage.UseVisualStyleBackColor = true;
+            this.btnRecieveMessage.Click += new System.EventHandler(this.BtnRecieveMessage_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRecieveMessage);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxInbox);
             this.Controls.Add(this.label3);
@@ -93,6 +105,7 @@
         private System.Windows.Forms.TextBox tbxInbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnStartaServer;
+        private System.Windows.Forms.Button btnRecieveMessage;
     }
 }
 
