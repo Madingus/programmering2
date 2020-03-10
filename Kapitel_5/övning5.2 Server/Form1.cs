@@ -51,5 +51,9 @@ namespace övning5._2_Server
             
             
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
-}

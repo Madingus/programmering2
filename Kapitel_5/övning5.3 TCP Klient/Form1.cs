@@ -14,7 +14,7 @@ namespace övning5._3_TCP_Klient
 {
     public partial class Form1 : Form
     {
-        TcpClient client;
+        TcpClient client = new TcpClient();
         int port = 12345;
         public Form1()
         {
@@ -29,10 +29,7 @@ namespace övning5._3_TCP_Klient
             if (!client.Connected) StartConnection();
 
 
-            IPAddress adress = IPAddress.Parse(tbxServerAdress.Text);
-            client = new TcpClient();
-            client.NoDelay = true;
-            client.Connect(adress, port);
+            
         }
 
         private void StartConnection()
@@ -66,8 +63,14 @@ namespace övning5._3_TCP_Klient
             catch(Exception error) { MessageBox.Show(error.Message, Text); return; }
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
-    }
 }
+
+

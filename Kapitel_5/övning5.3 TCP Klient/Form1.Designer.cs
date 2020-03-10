@@ -87,7 +87,7 @@
             this.btnRecieve.Name = "btnRecieve";
             this.btnRecieve.Size = new System.Drawing.Size(231, 30);
             this.btnRecieve.TabIndex = 18;
-            this.btnRecieve.Text = "Recieve";
+            this.btnRecieve.Text = "skicka";
             this.btnRecieve.UseVisualStyleBackColor = true;
             this.btnRecieve.Click += new System.EventHandler(this.BtnRecieve_Click);
             // 
@@ -115,6 +115,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

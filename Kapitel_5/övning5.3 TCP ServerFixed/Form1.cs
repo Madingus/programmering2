@@ -10,11 +10,10 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 
-namespace övning5._3_TCP_Server
+namespace övning5._3_TCP_ServerFixed
 {
     public partial class Form1 : Form
     {
-
         int port = 1234;
         TcpListener listener;
         TcpClient client;
@@ -23,22 +22,20 @@ namespace övning5._3_TCP_Server
         {
             InitializeComponent();
 
-
             try
             {
                 listener = new TcpListener(IPAddress.Any, port);
                 listener.Start();
-                
+               
+
             }
             catch (Exception error)
             {
                 MessageBox.Show(error.Message, Text); return;
             }
             StartRecieving();
-            
 
         }
-
         public async void StartRecieving()
         {
             try
@@ -46,7 +43,7 @@ namespace övning5._3_TCP_Server
                 client = await listener.AcceptTcpClientAsync();
 
             }
-            catch(Exception error) { MessageBox.Show(error.Message, Text); return; }
+            catch (Exception error) { MessageBox.Show(error.Message, Text); return; }
 
             StartReading(client);
 
@@ -66,12 +63,10 @@ namespace övning5._3_TCP_Server
             tbxInkorg.AppendText(Encoding.Unicode.GetString(buffer, 0, n));
             StartReading(k);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-
-
-
-
-        
-
-       

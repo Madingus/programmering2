@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.3", "5.3", "{D995DCF4-12F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "övning5.3 TCP Server", "övning5.3 TCP Server\övning5.3 TCP Server.csproj", "{C1F02C83-626A-4292-B381-53AD0A835EB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "övning5.3 TCP ServerFixed", "övning5.3 TCP ServerFixed\övning5.3 TCP ServerFixed.csproj", "{6E148030-118C-4BF8-BC67-C1B46344C1DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C1F02C83-626A-4292-B381-53AD0A835EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1F02C83-626A-4292-B381-53AD0A835EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1F02C83-626A-4292-B381-53AD0A835EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E148030-118C-4BF8-BC67-C1B46344C1DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E148030-118C-4BF8-BC67-C1B46344C1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E148030-118C-4BF8-BC67-C1B46344C1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E148030-118C-4BF8-BC67-C1B46344C1DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{52A05F67-4E93-4095-984E-07A55F87A0E7} = {55A2B5A6-4442-480B-A460-19CC42E567E2}
 		{07506537-1573-480F-BC99-007D605BB4B7} = {D995DCF4-12F4-4C0F-A0B4-495948377805}
 		{C1F02C83-626A-4292-B381-53AD0A835EB7} = {D995DCF4-12F4-4C0F-A0B4-495948377805}
+		{6E148030-118C-4BF8-BC67-C1B46344C1DD} = {D995DCF4-12F4-4C0F-A0B4-495948377805}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F581F5B-68BB-4B5D-8D64-B180202B1EB0}
