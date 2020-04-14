@@ -55,6 +55,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.btnStart = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3)).BeginInit();
@@ -293,11 +294,22 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(509, 114);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(176, 62);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Shuffle cards\r\n";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1059, 633);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.label4);
@@ -372,6 +384,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button button1;
     }
 }
 
