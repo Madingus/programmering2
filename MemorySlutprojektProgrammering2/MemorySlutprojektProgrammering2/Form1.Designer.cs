@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pbx1 = new System.Windows.Forms.PictureBox();
             this.pbx2 = new System.Windows.Forms.PictureBox();
             this.pbx3 = new System.Windows.Forms.PictureBox();
@@ -76,135 +75,163 @@
             // 
             // pbx1
             // 
-            this.pbx1.Image = ((System.Drawing.Image)(resources.GetObject("pbx1.Image")));
             this.pbx1.Location = new System.Drawing.Point(45, 212);
             this.pbx1.Name = "pbx1";
             this.pbx1.Size = new System.Drawing.Size(118, 76);
             this.pbx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx1.TabIndex = 0;
             this.pbx1.TabStop = false;
+            this.pbx1.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx2
             // 
-            this.pbx2.Image = ((System.Drawing.Image)(resources.GetObject("pbx2.Image")));
             this.pbx2.Location = new System.Drawing.Point(195, 212);
             this.pbx2.Name = "pbx2";
             this.pbx2.Size = new System.Drawing.Size(118, 76);
             this.pbx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx2.TabIndex = 1;
             this.pbx2.TabStop = false;
+            this.pbx2.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx3
             // 
             this.pbx3.Location = new System.Drawing.Point(342, 212);
             this.pbx3.Name = "pbx3";
             this.pbx3.Size = new System.Drawing.Size(118, 76);
+            this.pbx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx3.TabIndex = 2;
             this.pbx3.TabStop = false;
+            this.pbx3.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx4
             // 
             this.pbx4.Location = new System.Drawing.Point(489, 212);
             this.pbx4.Name = "pbx4";
             this.pbx4.Size = new System.Drawing.Size(118, 76);
+            this.pbx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx4.TabIndex = 3;
             this.pbx4.TabStop = false;
+            this.pbx4.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx5
             // 
             this.pbx5.Location = new System.Drawing.Point(45, 308);
             this.pbx5.Name = "pbx5";
             this.pbx5.Size = new System.Drawing.Size(118, 76);
+            this.pbx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx5.TabIndex = 4;
             this.pbx5.TabStop = false;
+            this.pbx5.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx6
             // 
             this.pbx6.Location = new System.Drawing.Point(195, 308);
             this.pbx6.Name = "pbx6";
             this.pbx6.Size = new System.Drawing.Size(118, 76);
+            this.pbx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx6.TabIndex = 5;
             this.pbx6.TabStop = false;
+            this.pbx6.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx7
             // 
             this.pbx7.Location = new System.Drawing.Point(342, 308);
             this.pbx7.Name = "pbx7";
             this.pbx7.Size = new System.Drawing.Size(118, 76);
+            this.pbx7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx7.TabIndex = 6;
             this.pbx7.TabStop = false;
+            this.pbx7.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx8
             // 
             this.pbx8.Location = new System.Drawing.Point(489, 308);
             this.pbx8.Name = "pbx8";
             this.pbx8.Size = new System.Drawing.Size(118, 76);
+            this.pbx8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx8.TabIndex = 7;
             this.pbx8.TabStop = false;
+            this.pbx8.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx16
             // 
             this.pbx16.Location = new System.Drawing.Point(489, 497);
             this.pbx16.Name = "pbx16";
             this.pbx16.Size = new System.Drawing.Size(118, 76);
+            this.pbx16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx16.TabIndex = 15;
             this.pbx16.TabStop = false;
+            this.pbx16.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx15
             // 
             this.pbx15.Location = new System.Drawing.Point(342, 497);
             this.pbx15.Name = "pbx15";
             this.pbx15.Size = new System.Drawing.Size(118, 76);
+            this.pbx15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx15.TabIndex = 14;
             this.pbx15.TabStop = false;
+            this.pbx15.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx14
             // 
             this.pbx14.Location = new System.Drawing.Point(195, 497);
             this.pbx14.Name = "pbx14";
             this.pbx14.Size = new System.Drawing.Size(118, 76);
+            this.pbx14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx14.TabIndex = 13;
             this.pbx14.TabStop = false;
+            this.pbx14.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx13
             // 
             this.pbx13.Location = new System.Drawing.Point(45, 497);
             this.pbx13.Name = "pbx13";
             this.pbx13.Size = new System.Drawing.Size(118, 76);
+            this.pbx13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx13.TabIndex = 12;
             this.pbx13.TabStop = false;
+            this.pbx13.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx12
             // 
             this.pbx12.Location = new System.Drawing.Point(489, 401);
             this.pbx12.Name = "pbx12";
             this.pbx12.Size = new System.Drawing.Size(118, 76);
+            this.pbx12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx12.TabIndex = 11;
             this.pbx12.TabStop = false;
+            this.pbx12.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx11
             // 
             this.pbx11.Location = new System.Drawing.Point(342, 401);
             this.pbx11.Name = "pbx11";
             this.pbx11.Size = new System.Drawing.Size(118, 76);
+            this.pbx11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx11.TabIndex = 10;
             this.pbx11.TabStop = false;
+            this.pbx11.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx10
             // 
             this.pbx10.Location = new System.Drawing.Point(195, 401);
             this.pbx10.Name = "pbx10";
             this.pbx10.Size = new System.Drawing.Size(118, 76);
+            this.pbx10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx10.TabIndex = 9;
             this.pbx10.TabStop = false;
+            this.pbx10.Click += new System.EventHandler(this.clickImage);
             // 
             // pbx9
             // 
             this.pbx9.Location = new System.Drawing.Point(45, 401);
             this.pbx9.Name = "pbx9";
             this.pbx9.Size = new System.Drawing.Size(118, 76);
+            this.pbx9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx9.TabIndex = 8;
             this.pbx9.TabStop = false;
+            this.pbx9.Click += new System.EventHandler(this.clickImage);
             // 
             // lblTitle
             // 
