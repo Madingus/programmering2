@@ -20,6 +20,11 @@ namespace MemorySlutprojektProgrammering2
         Timer clickTimer = new Timer(); // the timer that will be used to "hide" all the pictureboxes
         Timer timer = new Timer { Interval = 1000 }; //creates a timer with the interval 1000 milisecodnds
 
+        private Spelare spelare1 = new Spelare(0,0,false);
+        private Spelare spelare2 = new Spelare(0,0, false);
+        
+        
+
         private int _ticks; //keeps track of the timer
 
         public Form1()
@@ -132,6 +137,8 @@ namespace MemorySlutprojektProgrammering2
 
         private void clickImage(object sender, EventArgs e) //when an image is clicked this function runs
         {
+            
+
             if (!allowClick) return;
             var pic = (PictureBox)sender;
 
@@ -162,6 +169,16 @@ namespace MemorySlutprojektProgrammering2
                 MessageBox.Show("you win! play again?"); // if all picture boxes are visible you win and the pictures are reset
                 ResetImages();
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

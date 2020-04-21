@@ -55,6 +55,8 @@
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.btnStart = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblPlayerTurn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3)).BeginInit();
@@ -331,11 +333,34 @@
             this.button1.Text = "Shuffle cards\r\n";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(725, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 31);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "vems tur: ";
+            // 
+            // lblPlayerTurn
+            // 
+            this.lblPlayerTurn.AutoSize = true;
+            this.lblPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerTurn.Location = new System.Drawing.Point(874, 143);
+            this.lblPlayerTurn.Name = "lblPlayerTurn";
+            this.lblPlayerTurn.Size = new System.Drawing.Size(138, 31);
+            this.lblPlayerTurn.TabIndex = 28;
+            this.lblPlayerTurn.Text = "Spelare 1";
+            this.lblPlayerTurn.Click += new System.EventHandler(this.label5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1059, 633);
+            this.Controls.Add(this.lblPlayerTurn);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblTime);
@@ -363,6 +388,7 @@
             this.Controls.Add(this.pbx1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3)).EndInit();
@@ -412,6 +438,8 @@
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPlayerTurn;
     }
 }
 
