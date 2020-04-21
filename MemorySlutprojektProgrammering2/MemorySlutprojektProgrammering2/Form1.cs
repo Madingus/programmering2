@@ -12,6 +12,9 @@ namespace MemorySlutprojektProgrammering2
 {
     public partial class Form1 : Form
     {
+        int player1Score = 0;
+        int player2Score = 0;
+
         bool allowClick = false;
         PictureBox firstGuess;
         Random rnd = new Random(); //creates a random number generator class
@@ -146,27 +149,54 @@ namespace MemorySlutprojektProgrammering2
             {
                 firstGuess = pic;
                 pic.Image = (Image)pic.Tag;
-                return; // if the picrure matches, the value of the found picture becomes null
+                return; // if the picture matches, the value of the found picture becomes null
             }
             pic.Image = (Image)pic.Tag;
             
-            if (pic.Image == firstGuess.Image && pic != firstGuess) //if the 2 pictures chosen are not matching
+
+
+            if (pic.Image == firstGuess.Image && pic != firstGuess) //if the 2 pictures chosen are matching
             {
+                MessageBox.Show("you got a pair");
                 pic.Visible = firstGuess.Visible = false;
                 {
                     firstGuess = pic;
                 }
-                HideImages(); //hides the images after an attempt
+
+                
+               
+            //if(spelare1.MyTurn == true) //checks if its player 1s turn or not
+            //    {
+            //        player1Score = player1Score + 10;
+            //        lblPlayer1Score.Text = player1Score.ToString();
+            //        spelare1.MyTurn = false;
+            //        lblPlayerTurn.Text = "its player 2s turn!";
+
+            //    } 
+            //else //goes to this if-else if its not player 1 turn
+            //    {
+            //        player2Score = player2Score + 10;
+            //        lblPlayer2Score.Text = player2Score.ToString();
+            //        spelare1.MyTurn = true;
+            //        lblPlayerTurn.Text = "its player 1s turn!";
+            //    }
+           
+
+
+
             }
             
             else
             {
-                allowClick = false;
+                allowClick = false; //prevents you from being able to click more than 2 picures per turn
                 clickTimer.Start();
 
                 firstGuess = null;
                 if (pictureBoxes.Any(p => p.Visible)) return; // checks if all pictureBoxes are visible, and the game stops when all are visible
                 MessageBox.Show("you win! play again?"); // if all picture boxes are visible you win and the pictures are reset
+
+
+
                 ResetImages();
             }
         }
@@ -178,6 +208,23 @@ namespace MemorySlutprojektProgrammering2
 
         private void label5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e) //btnResetCards, will reset the cards and the player score when clicked on
+        {
+            
+            ResetImages();
+            HideImages();
+            setRandomImages();
+            player1Score = 0;
+            player2Score = 0;
+            lblPlayer1Score.Text = "0";
+            lblPlayer2Score.Text = "0";
+            _ticks = 0;
+            lblTime.Text = "0";
+            
+
 
         }
     }
