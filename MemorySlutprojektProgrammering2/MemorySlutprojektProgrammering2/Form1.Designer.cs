@@ -350,9 +350,9 @@
             this.lblPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerTurn.Location = new System.Drawing.Point(874, 143);
             this.lblPlayerTurn.Name = "lblPlayerTurn";
-            this.lblPlayerTurn.Size = new System.Drawing.Size(138, 31);
+            this.lblPlayerTurn.Size = new System.Drawing.Size(83, 31);
             this.lblPlayerTurn.TabIndex = 28;
-            this.lblPlayerTurn.Text = "Spelare 1";
+            this.lblPlayerTurn.Text = "Nada";
             this.lblPlayerTurn.Click += new System.EventHandler(this.label5_Click);
             // 
             // Form1

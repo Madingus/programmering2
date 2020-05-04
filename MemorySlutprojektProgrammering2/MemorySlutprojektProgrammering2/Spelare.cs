@@ -10,7 +10,7 @@ namespace MemorySlutprojektProgrammering2
     {
         protected int score;
         protected int wins;
-        protected bool myTurn = false;
+        protected bool myTurn = true;
 
 
        public Spelare(int _score, int _wins, bool _myTurn)

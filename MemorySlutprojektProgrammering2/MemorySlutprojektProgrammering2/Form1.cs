@@ -23,7 +23,7 @@ namespace MemorySlutprojektProgrammering2
         Timer clickTimer = new Timer(); // the timer that will be used to "hide" all the pictureboxes
         Timer timer = new Timer { Interval = 1000 }; //creates a timer with the interval 1000 milisecodnds
 
-        private Spelare spelare1 = new Spelare(0,0,false);
+        private Spelare spelare1 = new Spelare(0,0,true);
         private Spelare spelare2 = new Spelare(0,0, false);
         
         
@@ -127,6 +127,7 @@ namespace MemorySlutprojektProgrammering2
             clickTimer.Interval = 1000; // sets the interval timer to 1000 miliseconds
             clickTimer.Tick += CLICKTIMER_TICK; //when the clickTimer ticks, it also increases the value of CLICKTIMER
             btnStart.Enabled = false;
+            lblPlayerTurn.Text = "its player 1s turn!";
 
 
             gameTimer.Start(); //starts the timer when the "start game button is clicked"
@@ -149,7 +150,9 @@ namespace MemorySlutprojektProgrammering2
             {
                 firstGuess = pic;
                 pic.Image = (Image)pic.Tag;
+                
                 return; // if the picture matches, the value of the found picture becomes null
+               
             }
             pic.Image = (Image)pic.Tag;
             
@@ -165,34 +168,62 @@ namespace MemorySlutprojektProgrammering2
 
                 
                
-            //if(spelare1.MyTurn == true) //checks if its player 1s turn or not
-            //    {
-            //        player1Score = player1Score + 10;
-            //        lblPlayer1Score.Text = player1Score.ToString();
-            //        spelare1.MyTurn = false;
-            //        lblPlayerTurn.Text = "its player 2s turn!";
+                if(spelare1.MyTurn == true) //checks if its player 1s turn or not
+                  {
+                        player1Score = player1Score + 10;
+                        spelare1.Score = player1Score; // inserts the points into the player2 class
+                        lblPlayer1Score.Text = player1Score.ToString();
+                       
+                        lblPlayerTurn.Text = "player 1 got a pair!";
 
-            //    } 
-            //else //goes to this if-else if its not player 1 turn
-            //    {
-            //        player2Score = player2Score + 10;
-            //        lblPlayer2Score.Text = player2Score.ToString();
-            //        spelare1.MyTurn = true;
-            //        lblPlayerTurn.Text = "its player 1s turn!";
-            //    }
+                   } 
+                else //goes to this if-else if its not player 1 turn
+                    {
+                        player2Score = player2Score + 10;
+                        spelare2.Score = player2Score; // inserts the points into the player2 class
+                        lblPlayer2Score.Text = player2Score.ToString();
+                        
+                        lblPlayerTurn.Text = "player 2 got a pair!";
+                    }
            
 
 
 
             }
             
-            else
+            else //goes to this if - else statement if the cards are not matching
             {
+               MessageBox.Show("you guessed wrong!");
+
+                if (spelare1.MyTurn == true) //checks if its player 1s turn or not
+                {
+                    
+                   
+                    lblPlayerTurn.Text = "its player 2s turn!";
+                    spelare1.MyTurn = false;
+                }
+                else //goes to this if-else if its not player 1 turn
+                {
+
+                    spelare1.MyTurn = true;
+                    lblPlayerTurn.Text = "its player 1s turn!";
+                }
+            
+
                 allowClick = false; //prevents you from being able to click more than 2 picures per turn
                 clickTimer.Start();
 
                 firstGuess = null;
-                if (pictureBoxes.Any(p => p.Visible)) return; // checks if all pictureBoxes are visible, and the game stops when all are visible
+                if (pictureBoxes.Any(p => p.Visible)) 
+                {
+                    if (spelare1.Score < spelare2.Score)
+                        spelare2.Wins += 1;
+                    
+                    
+                    return; 
+                
+                
+                } // checks if all pictureBoxes are visible, and the game stops when all are visible
                 MessageBox.Show("you win! play again?"); // if all picture boxes are visible you win and the pictures are reset
 
 
@@ -223,7 +254,9 @@ namespace MemorySlutprojektProgrammering2
             lblPlayer2Score.Text = "0";
             _ticks = 0;
             lblTime.Text = "0";
-            
+            lblPlayerTurn.Text = "its player 1s turn";
+            spelare1.Score = 0;
+            spelare2.Score = 0;
 
 
         }
