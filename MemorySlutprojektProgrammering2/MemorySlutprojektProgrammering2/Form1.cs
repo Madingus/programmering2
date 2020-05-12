@@ -240,6 +240,47 @@ namespace MemorySlutprojektProgrammering2
             lblPlayer1Wins.Text = spelare1.Wins.ToString(); //updates the wins that player 1 and 2 have
             lblPlayer2Wins.Text = spelare2.Wins.ToString();
 
+            RestartGame();
+
+            
+
+        }
+
+
+        void LoadHighscore()
+        {
+            using (StreamReader sr = new StreamReader("highscore.txt")) //skapar en txt fil i "repos" där projektet är sparat
+            {
+                highScore = int.Parse(sr.ReadLine());
+                lblHighScore.Text = highScore.ToString();
+            }
+
+
+        }
+        void SaveHighscore()
+        {
+            using (StreamWriter streamWriter = new StreamWriter("highscore.txt"))
+            {
+                streamWriter.WriteLine(highScore.ToString());
+            }
+
+        }
+         
+        void RestartGame()
+        {
+            MessageBox.Show(highScore.ToString());
+            MessageBox.Show(spelare1.Score.ToString());
+            MessageBox.Show(spelare2.Score.ToString());
+            if (spelare1.Score > highScore)
+            {
+                highScore = spelare1.Score;
+            }
+            else if (spelare2.Score > highScore)
+            {
+                highScore = spelare2.Score;
+            }
+            lblHighScore.Text = highScore.ToString();
+            SaveHighscore();
             ResetImages();
             HideImages();
             setRandomImages();
@@ -253,35 +294,6 @@ namespace MemorySlutprojektProgrammering2
             spelare1.Score = 0;
             spelare2.Score = 0;
 
-        }
-
-
-        void LoadHighscore()
-        {
-            
-        }
-        void SaveHighscore()
-        {
-            using (StreamWriter streamWriter = new StreamWriter("highscore.txt"))
-            {
-                streamWriter.WriteLine(highScore.ToString());
-            }
-
-        }
-         
-        void RestartGame()
-        {
-            if (spelare1.Score > highScore)
-            {
-                highScore = spelare1.Score;
-            }
-            else if (spelare2.Score > highScore)
-            {
-                highScore = spelare2.Score;
-            }
-            lblHighScore.Text = highScore.ToString();
-            SaveHighscore();
-            ResetImages();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -316,6 +328,23 @@ namespace MemorySlutprojektProgrammering2
         private void label6_Click(object sender, EventArgs e) //high score
         {
             
+        }
+
+        private void btnWinTheGame_Click(object sender, EventArgs e)
+        {
+            spelare1.Score = 55;
+            spelare2.Score = 30;
+            RestartGame();
+        }
+
+        private void btnResetHighScore_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter streamWriter = new StreamWriter("highscore.txt"))
+            {
+                streamWriter.WriteLine("0"); //resets the highscore
+                lblHighScore.Text = "0";
+                highScore = 0;
+            }
         }
     }
 }

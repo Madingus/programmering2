@@ -63,6 +63,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblPlayer1Wins = new System.Windows.Forms.Label();
             this.lblPlayer2Wins = new System.Windows.Forms.Label();
+            this.btnWinTheGame = new System.Windows.Forms.Button();
+            this.btnResetHighScore = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3)).BeginInit();
@@ -332,11 +334,11 @@
             // btnResetCards
             // 
             this.btnResetCards.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetCards.Location = new System.Drawing.Point(511, 114);
+            this.btnResetCards.Location = new System.Drawing.Point(967, 559);
             this.btnResetCards.Name = "btnResetCards";
             this.btnResetCards.Size = new System.Drawing.Size(176, 62);
             this.btnResetCards.TabIndex = 26;
-            this.btnResetCards.Text = "Shuffle cards\r\n";
+            this.btnResetCards.Text = "Reset Game";
             this.btnResetCards.UseVisualStyleBackColor = true;
             this.btnResetCards.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -422,11 +424,33 @@
             this.lblPlayer2Wins.TabIndex = 37;
             this.lblPlayer2Wins.Text = "0";
             // 
+            // btnWinTheGame
+            // 
+            this.btnWinTheGame.Location = new System.Drawing.Point(489, 26);
+            this.btnWinTheGame.Name = "btnWinTheGame";
+            this.btnWinTheGame.Size = new System.Drawing.Size(75, 23);
+            this.btnWinTheGame.TabIndex = 38;
+            this.btnWinTheGame.Text = "button1";
+            this.btnWinTheGame.UseVisualStyleBackColor = true;
+            this.btnWinTheGame.Click += new System.EventHandler(this.btnWinTheGame_Click);
+            // 
+            // btnResetHighScore
+            // 
+            this.btnResetHighScore.Location = new System.Drawing.Point(1068, 12);
+            this.btnResetHighScore.Name = "btnResetHighScore";
+            this.btnResetHighScore.Size = new System.Drawing.Size(75, 23);
+            this.btnResetHighScore.TabIndex = 39;
+            this.btnResetHighScore.Text = "reset highscore";
+            this.btnResetHighScore.UseVisualStyleBackColor = true;
+            this.btnResetHighScore.Click += new System.EventHandler(this.btnResetHighScore_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 633);
+            this.Controls.Add(this.btnResetHighScore);
+            this.Controls.Add(this.btnWinTheGame);
             this.Controls.Add(this.lblPlayer2Wins);
             this.Controls.Add(this.lblPlayer1Wins);
             this.Controls.Add(this.label7);
@@ -520,6 +544,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPlayer1Wins;
         private System.Windows.Forms.Label lblPlayer2Wins;
+        private System.Windows.Forms.Button btnWinTheGame;
+        private System.Windows.Forms.Button btnResetHighScore;
     }
 }
 
