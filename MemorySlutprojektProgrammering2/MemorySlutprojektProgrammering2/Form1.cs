@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MemorySlutprojektProgrammering2
 {
@@ -25,14 +26,15 @@ namespace MemorySlutprojektProgrammering2
 
         private Spelare spelare1 = new Spelare(0,0,true);
         private Spelare spelare2 = new Spelare(0,0, false);
-        
-        
+
+        int highScore = 0;
 
         private int _ticks; //keeps track of the timer
 
         public Form1()
         {
             InitializeComponent();
+            LoadHighscore(); //laddar highscore när programmet startas med hjälp av en funktion
         }
 
         private PictureBox[] pictureBoxes //put this in a class later on?
@@ -162,13 +164,12 @@ namespace MemorySlutprojektProgrammering2
             {
                 MessageBox.Show("you got a pair");
                 pic.Visible = firstGuess.Visible = false;
-                {
-                    firstGuess = pic;
-                }
+                firstGuess.Visible = false;
+                firstGuess = null;
 
-                
-               
-                if(spelare1.MyTurn == true) //checks if its player 1s turn or not
+
+
+                if (spelare1.MyTurn == true) //checks if its player 1s turn or not
                   {
                         player1Score = player1Score + 10;
                         spelare1.Score = player1Score; // inserts the points into the player2 class
@@ -193,7 +194,7 @@ namespace MemorySlutprojektProgrammering2
             
             else //goes to this if - else statement if the cards are not matching
             {
-               MessageBox.Show("you guessed wrong!");
+               //if the player did get a match
 
                 if (spelare1.MyTurn == true) //checks if its player 1s turn or not
                 {
@@ -214,22 +215,73 @@ namespace MemorySlutprojektProgrammering2
                 clickTimer.Start();
 
                 firstGuess = null;
-                if (pictureBoxes.Any(p => p.Visible)) 
-                {
-                    if (spelare1.Score < spelare2.Score)
-                        spelare2.Wins += 1;
-                    
-                    
-                    return; 
                 
-                
-                } // checks if all pictureBoxes are visible, and the game stops when all are visible
-                MessageBox.Show("you win! play again?"); // if all picture boxes are visible you win and the pictures are reset
-
-
-
-                ResetImages();
             }
+            if (pictureBoxes.Any(p => p.Visible))
+            {
+
+
+                //MessageBox.Show("GAME not over");
+
+                return;
+
+
+            } // checks if all pictureBoxes are visible, and the game stops when all are visible
+
+            MessageBox.Show("you win! play again?"); // if all picture boxes are visible you win and the pictures are reset
+            if (spelare1.Score < spelare2.Score)
+            {
+                spelare2.Wins += 1;
+            }
+            else
+            {
+                spelare1.Wins += 1;
+            }
+            lblPlayer1Wins.Text = spelare1.Wins.ToString(); //updates the wins that player 1 and 2 have
+            lblPlayer2Wins.Text = spelare2.Wins.ToString();
+
+            ResetImages();
+            HideImages();
+            setRandomImages();
+            player1Score = 0;
+            player2Score = 0;
+            lblPlayer1Score.Text = "0";
+            lblPlayer2Score.Text = "0";
+            _ticks = 0;
+            lblTime.Text = "0";
+            lblPlayerTurn.Text = "its player 1s turn";
+            spelare1.Score = 0;
+            spelare2.Score = 0;
+
+        }
+
+
+        void LoadHighscore()
+        {
+            
+        }
+        void SaveHighscore()
+        {
+            using (StreamWriter streamWriter = new StreamWriter("highscore.txt"))
+            {
+                streamWriter.WriteLine(highScore.ToString());
+            }
+
+        }
+         
+        void RestartGame()
+        {
+            if (spelare1.Score > highScore)
+            {
+                highScore = spelare1.Score;
+            }
+            else if (spelare2.Score > highScore)
+            {
+                highScore = spelare2.Score;
+            }
+            lblHighScore.Text = highScore.ToString();
+            SaveHighscore();
+            ResetImages();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -259,6 +311,11 @@ namespace MemorySlutprojektProgrammering2
             spelare2.Score = 0;
 
 
+        }
+
+        private void label6_Click(object sender, EventArgs e) //high score
+        {
+            
         }
     }
 }
