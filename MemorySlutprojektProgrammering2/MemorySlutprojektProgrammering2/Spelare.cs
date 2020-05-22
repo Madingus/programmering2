@@ -38,12 +38,6 @@ namespace MemorySlutprojektProgrammering2
             set { myTurn = value; }
         }
 
-
-
-
-
     }
     
-
-
 }

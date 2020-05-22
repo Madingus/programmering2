@@ -228,16 +228,18 @@ namespace MemorySlutprojektProgrammering2
 
             } // checks if all pictureBoxes are visible, and the game stops when all are visible
 
-            MessageBox.Show("you win! play again?"); // if all picture boxes are visible you win and the pictures are reset
+            MessageBox.Show("Player 1 wins! play again?"); // if all picture boxes are visible you win!
             if (spelare1.Score < spelare2.Score)
             {
                 spelare2.Wins += 1;
+                MessageBox.Show("Player 2 wins! play again?"); // if all picture boxes are visible you win!
             }
             else
             {
                 spelare1.Wins += 1;
+                MessageBox.Show("Player 1 wins! play again?"); 
             }
-            lblPlayer1Wins.Text = spelare1.Wins.ToString(); //updates the wins that player 1 and 2 have
+            lblPlayer1Wins.Text = spelare1.Wins.ToString(); //updates the label "wins" that player 1 and 2 have
             lblPlayer2Wins.Text = spelare2.Wins.ToString();
 
             RestartGame();
@@ -257,7 +259,7 @@ namespace MemorySlutprojektProgrammering2
 
 
         }
-        void SaveHighscore()
+        void SaveHighscore() //saves the highest score that the player got in a txt file.
         {
             using (StreamWriter streamWriter = new StreamWriter("highscore.txt"))
             {
@@ -266,7 +268,7 @@ namespace MemorySlutprojektProgrammering2
 
         }
          
-        void RestartGame()
+        void RestartGame() // pretty much resets everything
         {
             MessageBox.Show(highScore.ToString());
             MessageBox.Show(spelare1.Score.ToString());

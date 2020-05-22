@@ -54,7 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.btnStart = new System.Windows.Forms.Button();
-            this.btnResetCards = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPlayerTurn = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,8 +62,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblPlayer1Wins = new System.Windows.Forms.Label();
             this.lblPlayer2Wins = new System.Windows.Forms.Label();
-            this.btnWinTheGame = new System.Windows.Forms.Button();
             this.btnResetHighScore = new System.Windows.Forms.Button();
+            this.btnResetCards = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3)).BeginInit();
@@ -331,17 +330,6 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // btnResetCards
-            // 
-            this.btnResetCards.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetCards.Location = new System.Drawing.Point(967, 559);
-            this.btnResetCards.Name = "btnResetCards";
-            this.btnResetCards.Size = new System.Drawing.Size(176, 62);
-            this.btnResetCards.TabIndex = 26;
-            this.btnResetCards.Text = "Reset Game";
-            this.btnResetCards.UseVisualStyleBackColor = true;
-            this.btnResetCards.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -424,25 +412,26 @@
             this.lblPlayer2Wins.TabIndex = 37;
             this.lblPlayer2Wins.Text = "0";
             // 
-            // btnWinTheGame
-            // 
-            this.btnWinTheGame.Location = new System.Drawing.Point(489, 26);
-            this.btnWinTheGame.Name = "btnWinTheGame";
-            this.btnWinTheGame.Size = new System.Drawing.Size(75, 23);
-            this.btnWinTheGame.TabIndex = 38;
-            this.btnWinTheGame.Text = "button1";
-            this.btnWinTheGame.UseVisualStyleBackColor = true;
-            this.btnWinTheGame.Click += new System.EventHandler(this.btnWinTheGame_Click);
-            // 
             // btnResetHighScore
             // 
-            this.btnResetHighScore.Location = new System.Drawing.Point(1068, 12);
+            this.btnResetHighScore.Location = new System.Drawing.Point(848, 598);
             this.btnResetHighScore.Name = "btnResetHighScore";
-            this.btnResetHighScore.Size = new System.Drawing.Size(75, 23);
+            this.btnResetHighScore.Size = new System.Drawing.Size(94, 23);
             this.btnResetHighScore.TabIndex = 39;
             this.btnResetHighScore.Text = "reset highscore";
             this.btnResetHighScore.UseVisualStyleBackColor = true;
             this.btnResetHighScore.Click += new System.EventHandler(this.btnResetHighScore_Click);
+            // 
+            // btnResetCards
+            // 
+            this.btnResetCards.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetCards.Location = new System.Drawing.Point(967, 559);
+            this.btnResetCards.Name = "btnResetCards";
+            this.btnResetCards.Size = new System.Drawing.Size(176, 62);
+            this.btnResetCards.TabIndex = 26;
+            this.btnResetCards.Text = "Reset Game";
+            this.btnResetCards.UseVisualStyleBackColor = true;
+            this.btnResetCards.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -450,7 +439,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 633);
             this.Controls.Add(this.btnResetHighScore);
-            this.Controls.Add(this.btnWinTheGame);
             this.Controls.Add(this.lblPlayer2Wins);
             this.Controls.Add(this.lblPlayer1Wins);
             this.Controls.Add(this.label7);
@@ -535,7 +523,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Button btnResetCards;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPlayerTurn;
         private System.Windows.Forms.Label label5;
@@ -544,8 +531,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPlayer1Wins;
         private System.Windows.Forms.Label lblPlayer2Wins;
-        private System.Windows.Forms.Button btnWinTheGame;
         private System.Windows.Forms.Button btnResetHighScore;
+        private System.Windows.Forms.Button btnResetCards;
     }
 }
 
